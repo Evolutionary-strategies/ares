@@ -2,3 +2,7 @@
 .pylintrc
 .DS_Store
 __pycache__/
+/pytorch_ares/test/data/*
+/pytorch_ares/test/data
+/pytorch_ares/test/evo/nets/
+/pytorch_ares/test/evo/nets/*
