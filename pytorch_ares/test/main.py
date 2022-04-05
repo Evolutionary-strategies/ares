@@ -15,6 +15,13 @@ ATTACKS = {
     'nes': NES,
     'nattack':Nattack,
     'evolutionary':Evolutionary,
+    'fgsm':FGSM,
+    'autoattack':AutoAttack,
+    'cw':CW,
+    'deepfool':DeepFool,
+    'pgd':PGD,
+    'bim':BIM,
+    'mim':MIM,
 }
 
 class Model(nn.Module):
@@ -79,10 +86,52 @@ def test(args):
     dist= 0
     success_num = 0
     test_num= 0
-
-    attack = FGSM(net, p=args.norm, eps=args.eps, data_name="cifar10",target=args.target, loss=args.loss, device=device)
-    name = attack.__class__.__name__
     
+    if args.attack_name == 'mim':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, epsilon=args.eps, norm=args.norm, decay_factor=args.decay_factor ,stepsize=args.stepsize, data_name="cifar10", steps=args.steps,target=False, device=device, loss=args.loss)
+    if args.attack_name == 'bim':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, epsilon=args.eps, norm=args.norm, stepsize=args.stepsize, data_name="cifar10", steps=args.steps,target=False, device=device, loss=args.loss)
+    if args.attack_name == 'pgd':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, epsilon=args.eps, norm=args.norm, stepsize=args.stepsize, data_name="cifar10", steps=args.steps,target=False, device=device, loss=args.loss)
+    if args.attack_name == 'deepfool':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, args.overshoot, args.max_iter, args.norm, False, device)
+    if args.attack_name == 'cw':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, device,args.norm, args.target, args.kappa, args.lr, args.init_const, args.max_iter, args.binary_search_steps, "cifar10")
+    if args.attack_name == 'autoattack':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net,norm=args.norm,steps=args.steps, query=args.n_queries, eps=args.eps, version=args.version,device=device)
+    if args.attack_name == 'fgsm':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, p=args.norm, eps=args.eps, data_name="cifar10",target=args.target, loss=args.loss, device=device)
+    if args.attack_name == 'ba':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, args.spherical_step_eps, args.norm,args.orth_step_factor,args.perp_step_factor, 
+                        args.orthogonal_step_eps, args.max_queries, "cifar10", device,False)
+    if args.attack_name == 'spsa':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net,norm=args.norm, device=device, eps=args.eps, learning_rate=args.learning_rate, delta=args.delta, spsa_samples=args.spsa_samples, 
+                 sample_per_draw=args.sample_per_draw, nb_iter=args.max_queries, data_name="cifar10",early_stop_loss_threshold=None, IsTargeted=args.target)
+    if args.attack_name == 'nes':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, nes_samples=args.nes_samples, sample_per_draw=args.nes_per_draw, 
+                              p=args.norm, max_queries=args.max_queries, epsilon=args.epsilon, step_size=args.stepsize,
+                device=device, data_name="cifar10", search_sigma=0.02, decay=1.0, random_perturb_start=True, target=args.target)
+    if args.attack_name == 'nattack':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net, eps=args.epsilon, max_queries=args.max_queries, device=device,data_name="cifar10", 
+                              distance_metric=args.norm, target=args.target, sample_size=args.sample_size, lr=args.lr, sigma=args.sigma)
+    if args.attack_name == 'evolutionary':
+        attack_class = ATTACKS[args.attack_name]
+        attack = attack_class(net,"cifar10",args.target,device, args.ccov, 
+        args.decay_weight, args.max_queries, args.mu, args.sigma, args.maxlen)
+
+
+    name = attack.__class__.__name__
     for i, (image,labels) in enumerate(test_loader, 1):
         batchsize = image.shape[0]
         image, labels = image.to(device), labels.to(device)
@@ -121,19 +170,17 @@ def test(args):
             adv_acc = 1-(success_num.item() / num)
             db_mean_distance = dist / num
             distortion_mean = distortion / num
-            print("%s Dataset No. %d default model accuracy：%.2f %%" %("cifar10", i, test_acc*100 ))
-            print("%s exist %s Dataset No. %a adversarial accuracy: %.2f %%" %(name, "cifar10", i, adv_acc*100))
-            print("%s exist %s Dataset No. %a attack success rate: %f" %(name, "cifar10", i, db_mean_distance))
-            print("%s exist %s Dataset No. %a attack success rate: %e \n" %(name, "cifar10", i,  distortion_mean))
+            print("%s Image No. %d default model accuracy：%.2f %%" %("cifar10", i, test_acc*100 ))
+            print("%s %s Image No. %a adversarial accuracy: %.2f %%" %(name, "cifar10", i, adv_acc*100))
+
     total_num = len(test_loader.dataset)
     final_test_acc = test_num.item() / total_num
     success_num = 1-(success_num.item() / num)
     db_mean_distance = dist / num
     distortion_mean = distortion / num
     print("%s Dataset Classification Accuracy：%.2f %%" %("cifar10", final_test_acc*100))
-    print("%s exist %s Adversarial accuracy：%.2f %%" %(name, "cifar10", success_num*100))
-    print("%s exist %s Dataset Classification Accuracy：%f" %(name, "cifar10", db_mean_distance))
-    print("%s exist %s Dataset Classification Accuracy：%e \n" %(name, "cifar10", distortion_mean))
+    print("%s %s Adversarial accuracy：%.2f %%" %(name, "cifar10", success_num*100))
+ 
     
 
 
@@ -141,49 +188,31 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-
-
-    parser.add_argument('--crop_pct', type=float, default=0.875, help='Input image center crop percent') 
-    parser.add_argument('--input_size', type=int, default=224, help='Input image size') 
-    parser.add_argument('--interpolation', type=str, default='bilinear', choices=['bilinear', 'bicubic'], help='') 
-    parser.add_argument("--gpu", type=str, default="2", help="Comma separated list of GPU ids")
-    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=[np.inf, 2])
-    parser.add_argument('--eps', type= float, default=0.01, help='linf: 8/255.0 and l2: 3.0')
-    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])
-    parser.add_argument('--target', default=False, help= 'target for attack', choices= [True, False])
-
-    """
     # data preprocess args 
     parser.add_argument("--gpu", type=str, default="2", help="Comma separated list of GPU ids")
-    parser.add_argument('--crop_pct', type=float, default=0.875, help='Input image center crop percent') 
-    parser.add_argument('--input_size', type=int, default=224, help='Input image size') 
     parser.add_argument('--interpolation', type=str, default='bilinear', choices=['bilinear', 'bicubic'], help='')
-    parser.add_argument('--dataset_name', default='cifar10', help= 'Dataset for this model', choices= ['cifar10', 'imagenet'])
-    parser.add_argument('--norm', default= 2, help='You can choose linf and l2', choices=[np.inf, 1, 2])
-    parser.add_argument('--batchsize', default=10, help= 'batchsize for this model')
-    parser.add_argument('--cifar10_path', default=os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),'data/CIFAR10'), help='cifar10_path for this model')
-    parser.add_argument('--attack_name', default='evolutionary', help= 'Dataset for this model', choices= ['ba','spsa', 'nes','nattack','evolutionary'])
-    
-    parser.add_argument('--spherical_step_eps', type= float, default=1e-2)
-    parser.add_argument('--orthogonal_step_eps', type= float, default=1e-2)
-    parser.add_argument('--orth_step_factor', type= float, default=0.97)
-    parser.add_argument('--perp_step_factor', type= float, default=0.97)
-    parser.add_argument('--max_queries', type= int, default=20000, help='max_queries for black-box attack based on queries')
+    parser.add_argument('--attack_name', default='evolutionary', help= 'Dataset for this model', choices= ['ba','spsa', 'nes','nattack','evolutionary', 'fgsm', 'autoattack', 'cw','deepfool','pgd','bim', 'mim'])
+
+
+    """#FGSM
+    #parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])
+    parser.add_argument('--eps', type= float, default=0.01, help='linf: 8/255.0 and l2: 3.0')
+
     #spsa
-    parser.add_argument('--eps', type= float, default= 16/255.0, help='eps for spsa, 0.05 for linf 3.0')
     parser.add_argument('--learning_rate', type= float, default=0.006, help='learning_rate for spsa')
     parser.add_argument('--delta', type= float, default=1e-3, help='delta for spsa')
     parser.add_argument('--spsa_samples', type= int, default= 10, help='spsa_samples for spsa')
     parser.add_argument('--sample_per_draw', type= int, default=20, help='spsa_iters for spsa')
     #nes
     parser.add_argument('--epsilon', type= float, default= 16/255.0, help='eps for spsa, 0.05 for linf')
-    parser.add_argument('--stepsize', type= float, default=16/25500.0, help='learning_rate for spsa')
-    parser.add_argument('--max_iter', type= int, default=100, help='max_iter for spsa')
+    #parser.add_argument('--stepsize', type= float, default=16/25500.0, help='learning_rate for spsa')
+    #parser.add_argument('--max_iter', type= int, default=100, help='max_iter for spsa')
     parser.add_argument('--nes_samples', default= 10, help='nes_samples for nes')
     parser.add_argument('--nes_per_draw', type= int, default=20, help='nes_iters for nes')
     #nattack
     parser.add_argument('--sample_size', type= int, default=100, help='sample_size for nattack')
-    parser.add_argument('--lr', type= float, default= 0.02, help='lr for nattack')
+    #parser.add_argument('--lr', type= float, default= 0.02, help='lr for nattack')
     parser.add_argument('--sigma', type= float, default= 0.1, help='sigma for nattack')
     #Evolutionary
     parser.add_argument('--ccov', type= float, default= 0.001, help='eps for spsa, 0.05 for linf')
@@ -192,7 +221,63 @@ if __name__ == "__main__":
     parser.add_argument('--sigmaa', type= float, default= 3e-2, help='nes_samples for nes')
     parser.add_argument('--maxlen', type= int, default=30, help='nes_iters for nes')
     parser.add_argument('--target', default=False, help= 'target for attack', choices= [True, False])
-    """
+    #autoattack
+    parser.add_argument('--version', default='rand', help= 'version for autoattack', choices= ['standard', 'plus', 'rand'])
+    parser.add_argument('--n_queries', default= 5000, help= 'n_queries for square')
+    parser.add_argument('--stepsize', type= float, default=8/24000.0, help='linf: eps/steps and l2: (2.5*eps)/steps that is 0.075')
+    parser.add_argument('--steps', type= int, default=100, help='linf: 100 and l2: 100, steps is set to 100 if attack is apgd')
+    #parser.add_argument('--norm', default="Linf", help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=['Linf', 'L2', 'L1'])
+    #cw
+    parser.add_argument('--norm', default=2, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--kappa', type= float, default=0.0)
+    parser.add_argument('--lr', type= float, default=0.2)
+    parser.add_argument('--init_const', type= float, default=0.01)
+    parser.add_argument('--binary_search_steps', type= int, default=4)
+    parser.add_argument('--max_iter', type= int, default=200)
+
+    #deepfool
+    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--batchsize', default=10, help= 'batchsize for this model')
+    parser.add_argument('--overshoot', type= float, default=0.02)
+    parser.add_argument('--max_iter', type= int, default=50)
+
+    #pgd
+    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support apgd and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--eps', type= float, default=8/255.0, help='linf: 8/255.0 and l2: 3.0')
+    parser.add_argument('--stepsize', type= float, default=8/24000.0, help='linf: eps/steps and l2: (2.5*eps)/steps that is 0.075')
+    parser.add_argument('--steps', type= int, default=100, help='linf: 100 and l2: 100, steps is set to 100 if attack is apgd')
+    parser.add_argument('--n_queries', default= 5000, help= 'n_queries for square')
+    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])
+
+    #ba
+    parser.add_argument('--norm', default= 2, help='You can choose linf and l2', choices=[np.inf, 1, 2])
+    parser.add_argument('--spherical_step_eps', type= float, default=1e-2)
+    parser.add_argument('--orthogonal_step_eps', type= float, default=1e-2)
+    parser.add_argument('--orth_step_factor', type= float, default=0.97)
+    parser.add_argument('--perp_step_factor', type= float, default=0.97)
+    parser.add_argument('--max_queries', type= int, default=20000, help='max_queries for black-box attack based on queries')
+    #bim
+    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support apgd and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--eps', type= float, default=8/255.0, help='linf: 8/255.0 and l2: 3.0')
+    parser.add_argument('--stepsize', type= float, default=8/24000.0, help='linf: eps/steps and l2: (2.5*eps)/steps that is 0.075')
+    parser.add_argument('--steps', type= int, default=100, help='linf: 100 and l2: 100, steps is set to 100 if attack is apgd')
+    parser.add_argument('--n_queries', default= 5000, help= 'n_queries for square')
+    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])"""
+
+    #mim
+    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support apgd and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--eps', type= float, default=8/255.0, help='linf: 8/255.0 and l2: 3.0')
+    parser.add_argument('--stepsize', type= float, default=8/24000.0, help='linf: eps/steps and l2: (2.5*eps)/steps that is 0.075')
+    parser.add_argument('--steps', type= int, default=100, help='linf: 100 and l2: 100, steps is set to 100 if attack is apgd')
+    parser.add_argument('--n_queries', default= 5000, help= 'n_queries for square')
+    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])
+    parser.add_argument('--decay_factor', default=1.0, help= 'float between 0 and 2.0')
+
+
+
+
+
+
     args = parser.parse_args()
     
 
