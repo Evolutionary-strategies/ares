@@ -54,7 +54,12 @@ class cifar10_model(torch.nn.Module):
 def test(args):
     gpu_list = [int(i) for i in args.gpu.strip().split(",")]
     device = torch.device(f"cuda:{gpu_list[0]}" if torch.cuda.is_available() else "cpu")
-    path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'test/evo/nets/gd_model_max.pt')
+    #test/evo/nets/gd_model_max.pt
+    #test/evo/nets/nes_model_sigma01.pt
+    #test/evo/nets/nes_model_sigma015.pt
+    #test/evo/nets/es_model_sigma015_acc073_1.pt
+
+    path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'test/evo/nets/nes_model_sigma01.pt')
    
     model = Model()
     pretrain_dict = torch.load(path, map_location=device)
@@ -74,30 +79,9 @@ def test(args):
     dist= 0
     success_num = 0
     test_num= 0
-    
-    if args.attack_name == 'ba':
-        attack_class = ATTACKS[args.attack_name]
-        attack = attack_class(net, args.spherical_step_eps, args.norm,args.orth_step_factor,args.perp_step_factor, 
-                        args.orthogonal_step_eps, args.max_queries, args.dataset_name, device,args.target)
-    if args.attack_name == 'spsa':
-        attack_class = ATTACKS[args.attack_name]
-        attack = attack_class(net,norm=args.norm, device=device, eps=args.eps, learning_rate=args.learning_rate, delta=args.delta, spsa_samples=args.spsa_samples, 
-                 sample_per_draw=args.sample_per_draw, nb_iter=args.max_queries, data_name=args.dataset_name,early_stop_loss_threshold=None, IsTargeted=args.target)
-    if args.attack_name == 'nes':
-        attack_class = ATTACKS[args.attack_name]
-        attack = attack_class(net, nes_samples=args.nes_samples, sample_per_draw=args.nes_per_draw, 
-                              p=args.norm, max_queries=args.max_queries, epsilon=args.epsilon, step_size=args.stepsize,
-                device=device, data_name=args.dataset_name, search_sigma=0.02, decay=1.0, random_perturb_start=True, target=args.target)
-    if args.attack_name == 'nattack':
-        attack_class = ATTACKS[args.attack_name]
-        attack = attack_class(net, eps=args.epsilon, max_queries=args.max_queries, device=device,data_name=args.dataset_name, 
-                              distance_metric=args.norm, target=args.target, sample_size=args.sample_size, lr=args.lr, sigma=args.sigma)
-    if args.attack_name == 'evolutionary':
-        attack_class = ATTACKS[args.attack_name]
-        attack = attack_class(net,args.dataset_name,args.target,device, args.ccov, 
-        args.decay_weight, args.max_queries, args.mu, args.sigma, args.maxlen)
 
-
+    attack = FGSM(net, p=args.norm, eps=args.eps, data_name="cifar10",target=args.target, loss=args.loss, device=device)
+    name = attack.__class__.__name__
     
     for i, (image,labels) in enumerate(test_loader, 1):
         batchsize = image.shape[0]
@@ -117,8 +101,8 @@ def test(args):
 
     
         if i==1:
-            filename = "%s_%s_%s.png" %(args.attack_name, args.dataset_name, args.norm)
-            load_path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),'test_out/', filename)
+            filename = "%s_%s_%s.png" %(name, "cifar10", args.norm)
+            load_path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),'test/test_out/', filename)
             save_image( torch.cat([image, adv_image], 0),  load_path, nrow=batchsize, padding=2, normalize=True, 
                         range=(0,1), scale_each=False, pad_value=0)
 
@@ -134,22 +118,22 @@ def test(args):
         if i % 1 == 0:
             num = i*batchsize
             test_acc = test_num.item() / num
-            adv_acc = success_num.item() / num
+            adv_acc = 1-(success_num.item() / num)
             db_mean_distance = dist / num
             distortion_mean = distortion / num
-            print("%s数据集第%d次分类准确率：%.2f %%" %(args.dataset_name, i, test_acc*100 ))
-            print("%s在%s数据集第%d次攻击成功率：%.2f %%" %(args.attack_name, args.dataset_name, i, adv_acc*100))
-            print("%s在%s数据集第%d次的平均距离：%f" %(args.attack_name, args.dataset_name, i, db_mean_distance))
-            print("%s在%s数据集第%d次的平均失真：%e \n" %(args.attack_name, args.dataset_name, i,  distortion_mean))
+            print("%s Dataset No. %d default model accuracy：%.2f %%" %("cifar10", i, test_acc*100 ))
+            print("%s exist %s Dataset No. %a adversarial accuracy: %.2f %%" %(name, "cifar10", i, adv_acc*100))
+            print("%s exist %s Dataset No. %a attack success rate: %f" %(name, "cifar10", i, db_mean_distance))
+            print("%s exist %s Dataset No. %a attack success rate: %e \n" %(name, "cifar10", i,  distortion_mean))
     total_num = len(test_loader.dataset)
     final_test_acc = test_num.item() / total_num
-    success_num = success_num.item() / num
+    success_num = 1-(success_num.item() / num)
     db_mean_distance = dist / num
     distortion_mean = distortion / num
-    print("%s数据集分类准确率：%.2f %%" %(args.dataset_name, final_test_acc*100))
-    print("%s在%s数据集攻击成功率：%.2f %%" %(args.attack_name, args.dataset_name, success_num*100))
-    print("%s在%s数据集的平均距离：%f" %(args.attack_name, args.dataset_name, db_mean_distance))
-    print("%s在%s数据集的平均失真：%e \n" %(args.attack_name, args.dataset_name, distortion_mean))
+    print("%s Dataset Classification Accuracy：%.2f %%" %("cifar10", final_test_acc*100))
+    print("%s exist %s Adversarial accuracy：%.2f %%" %(name, "cifar10", success_num*100))
+    print("%s exist %s Dataset Classification Accuracy：%f" %(name, "cifar10", db_mean_distance))
+    print("%s exist %s Dataset Classification Accuracy：%e \n" %(name, "cifar10", distortion_mean))
     
 
 
@@ -157,6 +141,18 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
+
+
+    parser.add_argument('--crop_pct', type=float, default=0.875, help='Input image center crop percent') 
+    parser.add_argument('--input_size', type=int, default=224, help='Input image size') 
+    parser.add_argument('--interpolation', type=str, default='bilinear', choices=['bilinear', 'bicubic'], help='') 
+    parser.add_argument("--gpu", type=str, default="2", help="Comma separated list of GPU ids")
+    parser.add_argument('--norm', default=np.inf, help='You can choose np.inf and 2(l2), l2 support all methods and linf dont support cw and deepfool', choices=[np.inf, 2])
+    parser.add_argument('--eps', type= float, default=0.01, help='linf: 8/255.0 and l2: 3.0')
+    parser.add_argument('--loss', default='cw', help= 'loss for fgsm, bim, pgd, mim, dim and tim', choices= ['ce', 'cw'])
+    parser.add_argument('--target', default=False, help= 'target for attack', choices= [True, False])
+
+    """
     # data preprocess args 
     parser.add_argument("--gpu", type=str, default="2", help="Comma separated list of GPU ids")
     parser.add_argument('--crop_pct', type=float, default=0.875, help='Input image center crop percent') 
@@ -167,7 +163,7 @@ if __name__ == "__main__":
     parser.add_argument('--batchsize', default=10, help= 'batchsize for this model')
     parser.add_argument('--cifar10_path', default=os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),'data/CIFAR10'), help='cifar10_path for this model')
     parser.add_argument('--attack_name', default='evolutionary', help= 'Dataset for this model', choices= ['ba','spsa', 'nes','nattack','evolutionary'])
-    #boundary
+    
     parser.add_argument('--spherical_step_eps', type= float, default=1e-2)
     parser.add_argument('--orthogonal_step_eps', type= float, default=1e-2)
     parser.add_argument('--orth_step_factor', type= float, default=0.97)
@@ -195,8 +191,9 @@ if __name__ == "__main__":
     parser.add_argument('--mu', type= float, default=1e-2, help='max_iter for spsa')
     parser.add_argument('--sigmaa', type= float, default= 3e-2, help='nes_samples for nes')
     parser.add_argument('--maxlen', type= int, default=30, help='nes_iters for nes')
-    
     parser.add_argument('--target', default=False, help= 'target for attack', choices= [True, False])
+    """
     args = parser.parse_args()
+    
 
     test(args)
