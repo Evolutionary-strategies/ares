@@ -1,3 +1,5 @@
+This is a fork of the ARES source code, adapted for use with our models. A description of the original code, as well as the MIT licence for it can be found here: https://pythonlang.dev/repo/thu-ml-ares/.
+
 # ares
 A Python library for adversarial machine learning focusing on benchmarking adversarial robustness.
 ## Files in the folder
