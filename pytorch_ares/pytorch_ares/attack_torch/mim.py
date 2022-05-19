@@ -8,9 +8,9 @@ from pytorch_ares.attack_torch.utils import loss_adv
 
 class MIM(object):
     '''Projected Gradient Descent'''
-    def __init__(self, net, epsilon, p, stepsize, steps, decay_factor, data_name,target, loss, device):
+    def __init__(self, net, epsilon, norm, stepsize, steps, decay_factor, data_name,target, loss, device):
         self.epsilon = epsilon
-        self.p = p
+        self.p = norm
         self.net = net
         self.decay_factor = decay_factor
         self.stepsize = stepsize

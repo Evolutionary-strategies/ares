@@ -1,0 +1,674 @@
+nattack_eps0.03nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.79 %
+ Nattack cifar10 Adversarial accuracy: 40.00 %
+spsa_l2_0.7cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 7.06 %
+spsa_linf_0.03cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 0.59 %
+nes_2_eps1cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 18.14 %
+nes_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 25.23 %
+nes_linf_0.03cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 3.53 %
+cw_kappa0.1cifar10 Dataset Classification Accuracy: 54.79 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+cw_kappa0cifar10 Dataset Classification Accuracy: 54.79 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+deepfool_l2_overshoot0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ DeepFool cifar10 Adversarial accuracy: 26.83 %
+deepfool_l2_overshoot0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ DeepFool cifar10 Adversarial accuracy: 18.98 %
+deepfool_l2_overshoot0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ DeepFool cifar10 Adversarial accuracy: 11.21 %
+deepfool_l2_overshoot0.03cifar10 Dataset Classification Accuracy: 54.79 %
+ DeepFool cifar10 Adversarial accuracy: 6.68 %
+pgd_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 6.22 %
+pgd_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 6.17 %
+pgd_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 10.81 %
+pgd_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 10.02 %
+pgd_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 54.50 %
+pgd_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 54.49 %
+pgd_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 54.72 %
+pgd_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 14.31 %
+pgd_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 1.88 %
+pgd_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 0.03 %
+mim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 6.22 %
+mim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 6.22 %
+mim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 10.73 %
+mim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 10.02 %
+mim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 54.75 %
+mim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 54.75 %
+mim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 54.75 %
+mim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 8.31 %
+mim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 0.55 %
+mim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 0.01 %
+bim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 6.22 %
+bim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 6.22 %
+bim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 10.63 %
+bim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 10.00 %
+bim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 54.75 %
+bim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 54.75 %
+bim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 54.75 %
+bim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 7.95 %
+bim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 0.44 %
+bim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 0.01 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 6.22 %
+fgsm_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 6.22 %
+fgsm_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 6.43 %
+fgsm_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 4.05 %
+fgsm_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 54.75 %
+fgsm_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 54.75 %
+fgsm_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 54.75 %
+fgsm_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 10.36 %
+fgsm_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 1.46 %
+fgsm_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 0.05 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.93 %
+ Nattack cifar10 Adversarial accuracy: 37.57 %
+spsa_l2_0.7cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 19.26 %
+spsa_linf_0.03cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 5.73 %
+nes_2_eps1cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 29.67 %
+nes_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 35.09 %
+nes_linf_0.03cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 13.52 %
+cw_kappa0.1cifar10 Dataset Classification Accuracy: 54.93 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+cw_kappa0cifar10 Dataset Classification Accuracy: 54.93 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+deepfool_l2_overshoot0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ DeepFool cifar10 Adversarial accuracy: 25.95 %
+deepfool_l2_overshoot0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ DeepFool cifar10 Adversarial accuracy: 19.34 %
+deepfool_l2_overshoot0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ DeepFool cifar10 Adversarial accuracy: 12.65 %
+deepfool_l2_overshoot0.03cifar10 Dataset Classification Accuracy: 54.93 %
+ DeepFool cifar10 Adversarial accuracy: 8.09 %
+pgd_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 6.25 %
+pgd_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 6.25 %
+pgd_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 18.69 %
+pgd_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 11.68 %
+pgd_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 54.83 %
+pgd_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 54.59 %
+pgd_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 54.81 %
+pgd_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 27.67 %
+pgd_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 12.33 %
+pgd_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 1.64 %
+mim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 6.26 %
+mim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 6.26 %
+mim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 18.41 %
+mim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 11.56 %
+mim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 54.66 %
+mim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 54.66 %
+mim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 54.66 %
+mim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 21.84 %
+mim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 7.14 %
+mim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 0.50 %
+bim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 6.26 %
+bim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 6.26 %
+bim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 18.16 %
+bim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 11.48 %
+bim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 54.66 %
+bim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 54.66 %
+bim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 54.66 %
+bim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 21.55 %
+bim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 6.82 %
+bim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 0.44 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 6.26 %
+fgsm_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 6.26 %
+fgsm_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 16.68 %
+fgsm_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 8.10 %
+fgsm_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 54.66 %
+fgsm_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 54.66 %
+fgsm_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 54.66 %
+fgsm_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 23.19 %
+fgsm_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 9.44 %
+fgsm_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 1.66 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.50 %
+ Nattack cifar10 Adversarial accuracy: 31.06 %
+spsa_l2_0.7cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 20.46 %
+spsa_linf_0.03cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 6.18 %
+nes_2_eps1cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 30.90 %
+nes_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 36.32 %
+nes_linf_0.03cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 14.10 %
+cw_kappa0.1cifar10 Dataset Classification Accuracy: 54.50 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+cw_kappa0cifar10 Dataset Classification Accuracy: 54.50 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+deepfool_l2_overshoot0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ DeepFool cifar10 Adversarial accuracy: 28.80 %
+deepfool_l2_overshoot0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ DeepFool cifar10 Adversarial accuracy: 22.47 %
+deepfool_l2_overshoot0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ DeepFool cifar10 Adversarial accuracy: 15.15 %
+deepfool_l2_overshoot0.03cifar10 Dataset Classification Accuracy: 54.50 %
+ DeepFool cifar10 Adversarial accuracy: 10.03 %
+pgd_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 5.95 %
+pgd_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 5.97 %
+pgd_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 19.34 %
+pgd_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 12.08 %
+pgd_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 54.19 %
+pgd_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 54.20 %
+pgd_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 54.32 %
+pgd_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 28.93 %
+pgd_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 12.96 %
+pgd_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 2.09 %
+mim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 5.92 %
+mim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 5.92 %
+mim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 19.00 %
+mim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 11.92 %
+mim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 54.15 %
+mim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 54.15 %
+mim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 54.15 %
+mim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 23.01 %
+mim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 7.73 %
+mim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 0.79 %
+bim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 5.92 %
+bim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 5.92 %
+bim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 18.73 %
+bim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 11.78 %
+bim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 54.15 %
+bim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 54.15 %
+bim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 54.15 %
+bim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 22.65 %
+bim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 7.30 %
+bim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 0.69 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 5.92 %
+fgsm_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 5.92 %
+fgsm_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 17.59 %
+fgsm_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 8.89 %
+fgsm_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 54.15 %
+fgsm_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 54.15 %
+fgsm_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 54.15 %
+fgsm_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 24.42 %
+fgsm_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 10.20 %
+fgsm_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 1.98 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 51.04 %
+ Nattack cifar10 Adversarial accuracy: 39.53 %
+spsa_l2_0.7cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 17.58 %
+spsa_linf_0.03cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 4.80 %
+nes_2_eps1cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 27.45 %
+nes_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 32.51 %
+nes_linf_0.03cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 11.84 %
+cw_kappa0.1cifar10 Dataset Classification Accuracy: 51.04 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+cw_kappa0cifar10 Dataset Classification Accuracy: 51.04 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+deepfool_l2_overshoot0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ DeepFool cifar10 Adversarial accuracy: 24.43 %
+deepfool_l2_overshoot0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ DeepFool cifar10 Adversarial accuracy: 17.71 %
+deepfool_l2_overshoot0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ DeepFool cifar10 Adversarial accuracy: 11.98 %
+deepfool_l2_overshoot0.03cifar10 Dataset Classification Accuracy: 51.04 %
+ DeepFool cifar10 Adversarial accuracy: 8.02 %
+pgd_ce_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 6.87 %
+pgd_ce_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 6.83 %
+pgd_cw_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 16.60 %
+pgd_cw_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 11.10 %
+pgd_ce_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 50.92 %
+pgd_ce_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 50.98 %
+pgd_ce_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 50.72 %
+pgd_cw_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 25.44 %
+pgd_cw_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 10.55 %
+pgd_cw_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 1.37 %
+mim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 6.84 %
+mim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 6.84 %
+mim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 16.45 %
+mim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 11.03 %
+mim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 50.93 %
+mim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 50.93 %
+mim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 50.93 %
+mim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 20.02 %
+mim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 5.88 %
+mim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 0.49 %
+bim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 6.85 %
+bim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 6.85 %
+bim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 16.25 %
+bim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 10.96 %
+bim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 50.93 %
+bim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 50.93 %
+bim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 50.93 %
+bim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 19.64 %
+bim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 5.57 %
+bim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 0.44 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 6.85 %
+fgsm_ce_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 6.85 %
+fgsm_cw_l2_0.3cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 14.59 %
+fgsm_cw_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 6.80 %
+fgsm_ce_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 50.93 %
+fgsm_ce_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 50.93 %
+fgsm_ce_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 50.93 %
+fgsm_cw_linf_0.005cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 21.31 %
+fgsm_cw_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 8.04 %
+fgsm_cw_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 1.60 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.48 %
+ Nattack cifar10 Adversarial accuracy: 27.50 %
+spsa_l2_0.7cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 40.06 %
+spsa_linf_0.03cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 28.13 %
+nes_2_eps1cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 45.33 %
+nes_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 47.80 %
+nes_linf_0.03cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 35.40 %
+cw_kappa0.1cifar10 Dataset Classification Accuracy: 54.48 %
+ CW cifar10 Adversarial accuracy: 34.98 %
+cw_kappa0cifar10 Dataset Classification Accuracy: 54.48 %
+ CW cifar10 Adversarial accuracy: 0.00 %
+deepfool_l2_overshoot0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ DeepFool cifar10 Adversarial accuracy: 20.74 %
+deepfool_l2_overshoot0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ DeepFool cifar10 Adversarial accuracy: 9.96 %
+deepfool_l2_overshoot0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ DeepFool cifar10 Adversarial accuracy: 5.71 %
+deepfool_l2_overshoot0.03cifar10 Dataset Classification Accuracy: 54.48 %
+ DeepFool cifar10 Adversarial accuracy: 3.59 %
+pgd_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 36.61 %
+pgd_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 25.79 %
+pgd_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 41.02 %
+pgd_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 31.27 %
+pgd_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 46.82 %
+pgd_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 39.22 %
+pgd_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 25.72 %
+pgd_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 45.79 %
+pgd_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 37.63 %
+pgd_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 24.05 %
+mim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 36.49 %
+mim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 25.78 %
+mim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 40.84 %
+mim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 30.98 %
+mim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 44.20 %
+mim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 34.58 %
+mim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 18.87 %
+mim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 43.14 %
+mim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 32.66 %
+mim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 17.93 %
+bim_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 36.29 %
+bim_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 25.20 %
+bim_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 40.71 %
+bim_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 30.75 %
+bim_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 44.17 %
+bim_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 34.31 %
+bim_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 18.26 %
+bim_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 43.09 %
+bim_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 32.46 %
+bim_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 17.48 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 37.35 %
+fgsm_ce_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 27.45 %
+fgsm_cw_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 40.17 %
+fgsm_cw_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 30.78 %
+fgsm_ce_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 44.37 %
+fgsm_ce_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 35.19 %
+fgsm_ce_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 20.59 %
+fgsm_cw_linf_0.005cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 43.33 %
+fgsm_cw_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 33.33 %
+fgsm_cw_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 19.64 %
+
+SVARTINGS
+
+nattack_eps0.03nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.48 %
+ Nattack cifar10 Adversarial accuracy: 19.90 %
+nattack_eps0.05cifar10 Dataset Classification Accuracy: 54.48 %
+ Nattack cifar10 Adversarial accuracy: 10.54 %
+nattack_eps0.1cifar10 Dataset Classification Accuracy: 54.48 %
+ Nattack cifar10 Adversarial accuracy: 4.54 %
+spsa_l2_0.5cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 44.36 %
+spsa_l2_1.0cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 33.01 %
+spsa_linf_0.01cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 45.73 %
+spsa_linf_0.02cifar10 Dataset Classification Accuracy: 54.48 %
+ SPSA cifar10 Adversarial accuracy: 36.43 %
+nes_2_eps0.7cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 46.59 %
+nes_2_eps1.3cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 44.56 %
+nes_linf_0.05cifar10 Dataset Classification Accuracy: 54.48 %
+ NES cifar10 Adversarial accuracy: 47.78 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.79 %
+ Nattack cifar10 Adversarial accuracy: 39.41 %
+nattack_eps0.05cifar10 Dataset Classification Accuracy: 54.79 %
+ Nattack cifar10 Adversarial accuracy: 32.00 %
+nattack_eps0.1cifar10 Dataset Classification Accuracy: 54.79 %
+ Nattack cifar10 Adversarial accuracy: 25.96 %
+spsa_l2_0.5cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 15.33 %
+spsa_l2_1.0cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 1.85 %
+spsa_linf_0.01cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 17.77 %
+spsa_linf_0.02cifar10 Dataset Classification Accuracy: 54.79 %
+ SPSA cifar10 Adversarial accuracy: 3.40 %
+nes_2_eps0.7cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 21.63 %
+nes_2_eps1.3cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 16.57 %
+nes_linf_0.05cifar10 Dataset Classification Accuracy: 54.79 %
+ NES cifar10 Adversarial accuracy: 25.26 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.93 %
+ Nattack cifar10 Adversarial accuracy: 37.53 %
+nattack_eps0.05cifar10 Dataset Classification Accuracy: 54.93 %
+ Nattack cifar10 Adversarial accuracy: 38.00 %
+nattack_eps0.1cifar10 Dataset Classification Accuracy: 54.93 %
+ Nattack cifar10 Adversarial accuracy: 38.14 %
+spsa_l2_0.5cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 27.61 %
+spsa_l2_1.0cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 10.55 %
+spsa_linf_0.01cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 29.76 %
+spsa_linf_0.02cifar10 Dataset Classification Accuracy: 54.93 %
+ SPSA cifar10 Adversarial accuracy: 13.73 %
+nes_2_eps0.7cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 32.46 %
+nes_2_eps1.3cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 28.27 %
+nes_linf_0.05cifar10 Dataset Classification Accuracy: 54.93 %
+ NES cifar10 Adversarial accuracy: 35.21 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 54.50 %
+ Nattack cifar10 Adversarial accuracy: 31.17 %
+nattack_eps0.05cifar10 Dataset Classification Accuracy: 54.50 %
+ Nattack cifar10 Adversarial accuracy: 31.98 %
+nattack_eps0.1cifar10 Dataset Classification Accuracy: 54.50 %
+ Nattack cifar10 Adversarial accuracy: 32.28 %
+spsa_l2_0.5cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 28.99 %
+spsa_l2_1.0cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 11.11 %
+spsa_linf_0.01cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 31.11 %
+spsa_linf_0.02cifar10 Dataset Classification Accuracy: 54.50 %
+ SPSA cifar10 Adversarial accuracy: 14.42 %
+nes_2_eps0.7cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 33.81 %
+nes_2_eps1.3cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 29.42 %
+nes_linf_0.05cifar10 Dataset Classification Accuracy: 54.50 %
+ NES cifar10 Adversarial accuracy: 36.13 %
+nattack_eps0.03cifar10 Dataset Classification Accuracy: 51.04 %
+ Nattack cifar10 Adversarial accuracy: 39.51 %
+nattack_eps0.05cifar10 Dataset Classification Accuracy: 51.04 %
+ Nattack cifar10 Adversarial accuracy: 39.41 %
+nattack_eps0.1cifar10 Dataset Classification Accuracy: 51.04 %
+ Nattack cifar10 Adversarial accuracy: 39.13 %
+spsa_l2_0.5cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 25.46 %
+spsa_l2_1.0cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 9.03 %
+spsa_linf_0.01cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 27.36 %
+spsa_linf_0.02cifar10 Dataset Classification Accuracy: 51.04 %
+ SPSA cifar10 Adversarial accuracy: 12.21 %
+nes_2_eps0.7cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 29.78 %
+nes_2_eps1.3cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 26.16 %
+nes_linf_0.05cifar10 Dataset Classification Accuracy: 51.04 %
+ NES cifar10 Adversarial accuracy: 32.55 %
+
+HVITINGS
+
+fgsm_ce_l2_0.3fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 37.35 %
+fgsm_ce_l2_0.3fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 37.35 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 56.00 %
+ FGSM cifar10 Adversarial accuracy: 41.00 %
+fgsm_ce_l2_0.3cifar10 Dataset Classification Accuracy: 58.00 %
+ FGSM cifar10 Adversarial accuracy: 6.00 %
+fgsm_ce_l2_0.3fgsm_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.48 %
+ FGSM cifar10 Adversarial accuracy: 12.00 %
+bim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.48 %
+ BIM cifar10 Adversarial accuracy: 8.13 %
+mim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.48 %
+ MIM cifar10 Adversarial accuracy: 9.23 %
+pgd_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.48 %
+ PGD cifar10 Adversarial accuracy: 12.28 %
+fgsm_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.79 %
+ FGSM cifar10 Adversarial accuracy: 6.22 %
+bim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.79 %
+ BIM cifar10 Adversarial accuracy: 6.22 %
+mim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.79 %
+ MIM cifar10 Adversarial accuracy: 6.22 %
+pgd_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.79 %
+ PGD cifar10 Adversarial accuracy: 6.16 %
+fgsm_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.93 %
+ FGSM cifar10 Adversarial accuracy: 6.26 %
+bim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.93 %
+ BIM cifar10 Adversarial accuracy: 6.26 %
+mim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.93 %
+ MIM cifar10 Adversarial accuracy: 6.26 %
+pgd_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.93 %
+ PGD cifar10 Adversarial accuracy: 6.24 %
+fgsm_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.50 %
+ FGSM cifar10 Adversarial accuracy: 5.92 %
+bim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.50 %
+ BIM cifar10 Adversarial accuracy: 5.92 %
+mim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.50 %
+ MIM cifar10 Adversarial accuracy: 5.92 %
+pgd_ce_l2_1.0cifar10 Dataset Classification Accuracy: 54.50 %
+ PGD cifar10 Adversarial accuracy: 5.96 %
+fgsm_ce_l2_1.0cifar10 Dataset Classification Accuracy: 51.04 %
+ FGSM cifar10 Adversarial accuracy: 6.85 %
+bim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 51.04 %
+ BIM cifar10 Adversarial accuracy: 6.85 %
+mim_ce_l2_1.0cifar10 Dataset Classification Accuracy: 51.04 %
+ MIM cifar10 Adversarial accuracy: 6.84 %
+pgd_ce_l2_1.0cifar10 Dataset Classification Accuracy: 51.04 %
+ PGD cifar10 Adversarial accuracy: 6.84 %

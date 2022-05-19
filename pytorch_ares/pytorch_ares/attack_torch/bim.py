@@ -7,9 +7,9 @@ from pytorch_ares.attack_torch.utils import loss_adv
 
 class BIM(object):
     '''Projected Gradient Descent'''
-    def __init__(self, net, epsilon, p, stepsize, steps, data_name,target,loss, device):
+    def __init__(self, net, epsilon, norm, stepsize, steps, data_name,target,loss, device):
         self.epsilon = epsilon
-        self.p = p
+        self.p = norm
         self.net = net
         self.stepsize = stepsize
         self.steps = steps
